@@ -1,13 +1,10 @@
 import weatherWidget from '../weatherWidget/weatherWidget.vue'
 
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'Index',
   components: {
     weatherWidget,
   }
-  // data() {
-  //   return {
-  //     count: 0,
-  //     count2: 0
-  //   }
-  // }
-}
+});

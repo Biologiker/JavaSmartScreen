@@ -1,4 +1,4 @@
-<script lang="ts" src="./index.ts"/>
+<script src="./index.ts"/>
 <style lang="scss" src="./index.scss"/>
 
 <template>
