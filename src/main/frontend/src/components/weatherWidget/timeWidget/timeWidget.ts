@@ -4,14 +4,14 @@ import { LoopTimings, CommunicationService } from '@/services/loopService';
 export default defineComponent({
   name: 'TimeWidget',
   methods: {
-    init
+    initTimeWidget
   },
-  mounted() { init() },
+  mounted() { initTimeWidget() },
 })
 
 
 
-export function init() {
+export function initTimeWidget() {
   CommunicationService.componentMethodCalled$.subscribe(() => {
     refreshWrapper(new Date(Date.now()));
   });

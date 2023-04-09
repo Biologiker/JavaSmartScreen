@@ -1,0 +1,15 @@
+.dayBox {
+  background-color: var(--DarkColor1);
+  width: calc(var(--weatherBoxWidth) * 0.15);
+  height: calc(var(--weatherBoxWidth) * 0.15);
+  margin-top: calc(var(--boxMargin)* 2);
+  margin-left: calc(var(--boxMargin)* 2);
+  border-radius: var(--defaultBorderRadius);
+  overflow: auto;
+}
+
+.innerDayBox {
+  text-align: center;
+  font-size: calc(var(--weatherBoxWidth) * 0.05);
+  font-weight: bold;
+}
