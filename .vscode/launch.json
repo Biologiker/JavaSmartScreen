@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-JavaSmartscreenApplication<javaSmartscreen>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "korella.quentin.javaSmartscreen.JavaSmartscreenApplication",
+      "projectName": "javaSmartscreen",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
