@@ -1,0 +1,77 @@
+:root {
+  --backgroundColor: #004643;
+  --defaultFontColor: #FFFFFF;
+
+  --AccentBright: #7BF1A8;
+  --AccentDark: #1F715D;
+  --GradientColor1: #3E9C76;
+  --GradientColor2: #C1FBA4;
+
+  --DarkColor1: #222831;
+  --DarkColor2: #1e232b;
+
+  --calcSize: 1000px;
+  --toolBarWidth: calc(var(--calcSize) * 0.08);
+}
+
+@media only screen and (max-width: 600px),
+only screen and (max-height: 400px) {
+  :root {
+    --weatherBoxHeight: calc(var(--calcSize) * 0.2);
+    --weatherBoxWidth: calc(var(--weatherBoxHeight) *1.5);
+    --boxMargin: calc(var(--calcSize) * 0.005);
+  }
+
+  /*todo: entfernen lol*/
+  body {
+    background-color: black !important;
+  }
+}
+
+body,
+html,
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--defaultFontColor);
+}
+
+.transitionAll {
+  transition: var(--transitionTime) ease-in-out;
+}
+
+.centerContent {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+#app-weather-widget {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  display: block;
+}
+
+#app-toolbar {
+  float: left;
+  height: var(--toolBarWidth);
+  width: var(--toolBarWidth);
+}
+
+//background box
+.bigBox {
+  height: 100%;
+  width: 100%;
+}

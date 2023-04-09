@@ -1,0 +1,42 @@
+:root {
+  --weatherBoxHeight: calc(var(--calcSize) * 0.4);
+  --weatherBoxWidth: calc(var(--weatherBoxHeight) * 1.5);
+  --defaultBorderRadius: calc(var(--weatherBoxWidth) * 0.0386996904024768);
+
+  --boxMargin: calc(var(--calcSize) * 0.01);
+  --transitionTime: 0.3s;
+
+  --clockBoxWidth: calc(var(--weatherBoxWidth) * 0.4 - var(--boxMargin) * 1.5);
+  --internWeatherBoxWidth: calc(var(--weatherBoxWidth) * 0.6 - var(--boxMargin) * 1.5);
+}
+
+.weatherBox {
+  position: absolute;
+  height: var(--weatherBoxHeight);
+  width: var(--weatherBoxWidth);
+  background: linear-gradient(90deg, var(--GradientColor1) 0%, var(--GradientColor2) 100%);
+  border-radius: var(--defaultBorderRadius);
+  cursor: move;
+}
+
+.clockBox {
+  height: calc(100% - var(--boxMargin) * 2);
+  width: var(--clockBoxWidth);
+  margin-top: var(--boxMargin);
+  margin-left: var(--boxMargin);
+  float: left;
+  border-radius: var(--defaultBorderRadius);
+  background: linear-gradient(0deg, var(--DarkColor1) -100%, var(--AccentDark) 100%);
+  transition: var(--transitionTime) ease-in-out;
+}
+
+.internWeatherBox {
+  height: calc(100% - var(--boxMargin) * 2);
+  width: var(--internWeatherBoxWidth);
+  margin-top: var(--boxMargin);
+  margin-left: var(--boxMargin);
+  float: left;
+  border-radius: var(--defaultBorderRadius);
+  background: linear-gradient(0deg, var(--AccentDark) -50%, var(--GradientColor1) 100%);
+  transition: var(--transitionTime) ease-in-out;
+}
