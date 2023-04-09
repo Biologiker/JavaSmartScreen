@@ -1,15 +1,12 @@
 export function setPostionOfElement(elementID: string) {
-  let restorableObjects = [elementID];
-  restorableObjects.forEach(element => {
-    if (localStorage.getItem(element + 'TranslateX') === null || localStorage.getItem(element + 'TranslateY')!.toString() === null) {
-      return;
-    }
+  if (localStorage.getItem(elementID + 'TranslateX') === null || localStorage.getItem(elementID + 'TranslateY')!.toString() === null) {
+    return;
+  }
 
-    let translateX: string = localStorage.getItem(element + 'TranslateX')!.toString() + "px"
-    let translateY: string = localStorage.getItem(element + 'TranslateY')!.toString() + "px"
-    document.getElementById(element)!.style.left = translateX;
-    document.getElementById(element)!.style.top = translateY;
-  });
+  let translateX: string = localStorage.getItem(elementID + 'TranslateX')!.toString()
+  let translateY: string = localStorage.getItem(elementID + 'TranslateY')!.toString()
+  document.getElementById(elementID)!.style.left = translateX;
+  document.getElementById(elementID)!.style.top = translateY;
 }
 
 export function inputPostionOfElement(elementID: string) {
@@ -20,16 +17,7 @@ export function inputPostionOfElement(elementID: string) {
   }
 
   const elementStyle = element.style;
-  const translateArray = elementStyle.transform.split('(')[1].split(')')[0].split(',');
-  let translateArrayX: number = parseInt(translateArray[0]);
-  let translateArrayY: number = parseInt(translateArray[1]);
 
-  let oldValueX: number = parseInt(window.getComputedStyle(element).left);
-  let oldValueY: number = parseInt(window.getComputedStyle(element).top);
-
-  translateArrayX = translateArrayX + oldValueX;
-  translateArrayY = translateArrayY + oldValueY;
-
-  localStorage.setItem(elementID + 'TranslateX', translateArrayX.toString());
-  localStorage.setItem(elementID + 'TranslateY', translateArrayY.toString());
+  localStorage.setItem(elementID + 'TranslateX', elementStyle.left.toString());
+  localStorage.setItem(elementID + 'TranslateY', elementStyle.top.toString());
 }

@@ -1,26 +1,20 @@
 import timeWidget from './timeWidget/timeWidget.vue'
-import { useDraggable } from '@vueuse/core'
-import { ref } from 'vue'
-import { setPostionOfElement, inputPostionOfElement } from '@/services/elementPostionService';
+import { dragMouseDown } from '@/services/dragElement'
+import { setPostionOfElement } from '@/services/elementPostionService'
 
 export default {
   components: {
     timeWidget,
   },
-  data() {
-    return {
-      style: style,
-    }
-  },
+  // data() {
+  //   return {
+  //     count: 0,
+  //     count2: 0
+  //   }
+  // }
+  methods: {
+    dragMouseDown,
+  }
 }
 
-const elWeatherWidget = ref(null)
-
-const { style } = useDraggable(elWeatherWidget, {
-  initialValue: { x: 500, y: 500 },
-})
-
-console.log(style);
-
-
-// setPostionOfElement("dwdw");
+window.onload = () => setPostionOfElement('weatherBox');

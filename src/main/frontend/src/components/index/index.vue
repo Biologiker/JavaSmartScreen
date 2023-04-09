@@ -1,6 +1,8 @@
-<script src="./index.ts"/>
+<script lang="ts" src="./index.ts"/>
 <style lang="scss" src="./index.scss"/>
 
 <template>
-  <weatherWidget />
+  <el-big-box class="bigBox" id="bigBox">
+    <weatherWidget />
+  </el-big-box>
 </template>
