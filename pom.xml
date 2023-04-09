@@ -39,6 +39,20 @@
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-starter-server -->
+    <dependency>
+      <groupId>de.codecentric</groupId>
+      <artifactId>spring-boot-admin-starter-server</artifactId>
+      <version>3.0.2</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-starter-client -->
+    <dependency>
+      <groupId>de.codecentric</groupId>
+      <artifactId>spring-boot-admin-starter-client</artifactId>
+      <version>3.0.2</version>
+    </dependency>
   </dependencies>
 
   <build>
