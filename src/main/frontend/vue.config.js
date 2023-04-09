@@ -2,6 +2,8 @@
 module.exports = {
   // https://cli.vuejs.org/config/#devserver-proxy
   devServer: {
+    hot: false,
+    liveReload: true,
     port: 8081,
     proxy: { // TODO: verify that this is actually needed
       '/api': {
