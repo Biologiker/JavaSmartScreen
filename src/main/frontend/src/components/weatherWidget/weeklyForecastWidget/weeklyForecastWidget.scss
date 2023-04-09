@@ -1,0 +1,93 @@
+//weather forecast box
+.weatherForeCastBox {
+  height: calc(var(--weatherBoxHeight) * 0.46);
+  max-width: calc(var(--weatherBoxHeight) * 0.9);
+  background-color: var(--DarkColor1);
+  border-radius: calc(var(--defaultBorderRadius) * 1.1);
+  margin: var(--boxMargin);
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-template-rows: 20% 80%;
+}
+
+//header in weatherForeCastBox
+.dayForecastTextBox {
+  font-size: calc(var(--weatherBoxWidth) * 0.03);
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
+  border-style: solid;
+  border-top-right-radius: var(--defaultBorderRadius);
+  border-top-left-radius: var(--defaultBorderRadius);
+  grid-column: 1 / 7;
+  font-weight: bold;
+}
+
+//daily forecast boxes 1/2 in weatherForeCastBox
+#dayLegendeBox {
+  border-bottom-left-radius: var(--defaultBorderRadius);
+}
+
+#dayForecastBox5 {
+  border-bottom-right-radius: var(--defaultBorderRadius);
+  border-right-width: calc(var(--weatherBoxWidth) * 0.005);
+}
+
+//weekday Box in weather forecast box
+.weekDayForecast {
+  float: left;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+//daily forecast boxes in weatherForeCastBox
+.dayForecastBox {
+  display: grid;
+  height: calc(100% - var(--weatherBoxWidth) * 0.005);
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
+  border-style: solid;
+  font-size: calc(var(--weatherBoxWidth) * 0.025);
+  border-top-width: 0;
+  border-right-width: 0;
+}
+
+.dayLegendeBox {
+  display: grid;
+  float: left;
+  height: calc(100% - var(--weatherBoxWidth) * 0.005);
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
+  border-style: solid;
+  font-size: calc(var(--weatherBoxWidth) * 0.025);
+  border-top-width: 0;
+  border-right-width: 0;
+  grid-row: 2;
+  grid-column: auto;
+}
+
+.dayLegende {
+  float: left;
+  height: 100%;
+  width: 90%;
+  font-weight: bold;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 6;
+  align-items: center;
+}
+
+.temperature_2m_max,
+.rain_sum,
+.precipitation_probability_max {
+  color: rgb(184, 184, 184);
+}

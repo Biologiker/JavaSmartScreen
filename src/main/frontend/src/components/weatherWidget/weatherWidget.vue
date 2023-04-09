@@ -6,10 +6,11 @@
     <div class=" clockBox" id="test">
       <timeWidget />
       <miniDayWidget />
-  </div>
-    <div class="internWeatherBox">
+    </div>
+  <div class="internWeatherBox">
+      <weeklyForecastWidget />
       <!-- <app-hourly-forecast-widget></app-hourly-forecast-widget>
-                                                                                                                                                                                                                                                                                                                                            <app-weekly-forecast-widget></app-weekly-forecast-widget> -->
+                                                                                                                                                                                                                                                                                                                                              <app-weekly-forecast-widget></app-weekly-forecast-widget> -->
     </div>
   </div>
 </template>
