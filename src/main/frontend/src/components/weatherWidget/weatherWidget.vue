@@ -7,10 +7,9 @@
       <timeWidget />
       <miniDayWidget />
     </div>
-  <div class="internWeatherBox">
+    <div class="internWeatherBox">
+      <hourlyForecastWidget />
       <weeklyForecastWidget />
-      <!-- <app-hourly-forecast-widget></app-hourly-forecast-widget>
-                                                                                                                                                                                                                                                                                                                                              <app-weekly-forecast-widget></app-weekly-forecast-widget> -->
     </div>
   </div>
 </template>

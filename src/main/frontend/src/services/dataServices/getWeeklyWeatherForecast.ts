@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { WeatherApiData } from "@/types/weatherApiIntefaces";
+import { weeklyForecastData } from "@/types/weatherApiIntefaces";
 
 export async function getWeeklyForecast(currDate: Date, weekDays: Array<string>, weeklyForecastHeaderID: string, boxesToFill: object) {
   const todayDate: string = currDate.toISOString().split("T")[0];
@@ -20,7 +20,7 @@ export async function getWeeklyForecast(currDate: Date, weekDays: Array<string>,
     '&start_date=' + todayDate + '&end_date=' + futureDate
 
   let response: AxiosResponse = await axios.get(url);
-  let responseData: WeatherApiData = response.data;
+  let responseData: weeklyForecastData = response.data;
 
   setData(responseData, weekDays, currDate, boxesToFill)
 }

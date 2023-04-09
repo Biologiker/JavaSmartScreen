@@ -5,6 +5,7 @@ import { defineComponent } from 'vue';
 import timeWidget from './timeWidget/timeWidget.vue'
 import miniDayWidget from './miniDayWidget/miniDayWidget.vue';
 import weeklyForecastWidget from './weeklyForecastWidget/weeklyForecastWidget.vue';
+import hourlyForecastWidget from './hourlyForecastWidget/hourlyForecastWidget.vue';
 
 export default defineComponent({
   name: 'WeatherWidget',
@@ -12,6 +13,7 @@ export default defineComponent({
     timeWidget,
     miniDayWidget,
     weeklyForecastWidget,
+    hourlyForecastWidget,
   },
   methods: {
     dragMouseDown,

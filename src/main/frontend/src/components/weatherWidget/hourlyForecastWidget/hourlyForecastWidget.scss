@@ -1,0 +1,67 @@
+//hourly weather forecast boxes
+.forecastBox {
+  background-color: var(--DarkColor1);
+  height: 100%;
+  display: grid !important;
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
+  border-style: solid;
+  border-right-width: 0;
+  border-top-width: 0;
+  font-size: calc(var(--weatherBoxWidth) * 0.025);
+  transition: var(--transitionTime) ease-in-out;
+}
+
+//forecastbox1/2 in currentWeatherBox
+#forecastBox1 {
+  border-bottom-left-radius: var(--defaultBorderRadius);
+}
+
+#forecastBox6 {
+  border-bottom-right-radius: var(--defaultBorderRadius);
+  border-right-width: calc(var(--weatherBoxWidth) * 0.005);
+}
+
+//small weather image in forecastBoxes
+.smallWeatherImageBox {
+  grid-row: 1;
+  width: calc(var(--weatherBoxWidth) * 0.07);
+  height: calc(var(--weatherBoxWidth) * 0.07);
+  overflow: hidden;
+  border-radius: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+//small weather image in smallWeatherImageBox
+.smallWeatherImage {
+  max-height: 100%;
+  background-color: var(--GradientColor1);
+}
+
+//current weather box
+.currentWeatherBox {
+  height: calc(var(--weatherBoxHeight) * 0.415);
+  background-color: var(--DarkColor1);
+  /*there was an overlap here the defaultBorderRadius gets multiplied by 1.1 */
+  border-radius: calc(var(--defaultBorderRadius) * 1.1);
+  margin: var(--boxMargin);
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-template-rows: 20% 80%;
+}
+
+//date box in currentWeatherBox
+.dateBox {
+  display: grid;
+  border-color: var(--DarkColor2);
+  border-width: calc(var(--weatherBoxWidth) * 0.005);
+  border-style: solid;
+  font-size: calc(var(--weatherBoxWidth) * 0.025);
+  grid-column: 1 / 7;
+  border-top-right-radius: var(--defaultBorderRadius);
+  border-top-left-radius: var(--defaultBorderRadius);
+}
