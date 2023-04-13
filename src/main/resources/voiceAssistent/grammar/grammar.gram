@@ -1,0 +1,20 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar 
+ */
+
+grammar grammar;
+
+public <wakeword> = ( smartscreen | jarvis | computer );
+public <hello> = ( hallo | guten morgen | guten mittag | guten abend );
+public <kill> = (kill);
+
+public <basicCmd> = <startPolite> <command> <endPolite>;
+
+<command> = <action> <object>;
+<action> = öffne | schließe | lösche | bewege;
+<object> = [das | ein] (fenster | datei | menü);
+
+<startPolite> = (bitte | könntest du) *;
+<endPolite> = [ bitte | danke | danke dir ];

@@ -53,6 +53,27 @@
       <artifactId>spring-boot-admin-starter-client</artifactId>
       <version>3.0.2</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/net.sf.phat/sphinx4-core -->
+    <dependency>
+      <groupId>net.sf.phat</groupId>
+      <artifactId>sphinx4-core</artifactId>
+      <version>5prealpha</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/de.sciss/sphinx4-data -->
+    <dependency>
+      <groupId>de.sciss</groupId>
+      <artifactId>sphinx4-data</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.ibm.watson/text-to-speech -->
+    <dependency>
+      <groupId>com.ibm.watson</groupId>
+      <artifactId>text-to-speech</artifactId>
+      <version>11.0.0</version>
+    </dependency>
   </dependencies>
 
   <build>
