@@ -11,7 +11,7 @@ import com.ibm.cloud.sdk.core.security.IamAuthenticator;
 import com.ibm.watson.text_to_speech.v1.model.SynthesizeOptions;
 import com.ibm.watson.text_to_speech.v1.util.WaveUtils;
 
-import korella.quentin.javaSmartscreen.VoiceAssistent.properties.ApiKeys;
+import korella.quentin.javaSmartscreen._Properties.ApiKeys;
 
 @Component
 @Configuration

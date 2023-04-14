@@ -1,4 +1,4 @@
-package korella.quentin.javaSmartscreen.VoiceAssistent.properties;
+package korella.quentin.javaSmartscreen._Properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

@@ -3,8 +3,8 @@ package korella.quentin.javaSmartscreen.VoiceAssistent.vcTasks;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import korella.quentin.javaSmartscreen.VoiceAssistent.ITask;
 import korella.quentin.javaSmartscreen.VoiceAssistent.TextToSpeech;
+import korella.quentin.javaSmartscreen._Interfaces.ITask;
 
 @Component
 public class Hello implements ITask {

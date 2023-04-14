@@ -2,7 +2,7 @@ package korella.quentin.javaSmartscreen.VoiceAssistent.vcTasks;
 
 import org.springframework.stereotype.Component;
 
-import korella.quentin.javaSmartscreen.VoiceAssistent.ITask;
+import korella.quentin.javaSmartscreen._Interfaces.ITask;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

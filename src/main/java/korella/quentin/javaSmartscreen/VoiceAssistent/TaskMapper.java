@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import korella.quentin.javaSmartscreen.VoiceAssistent.vcTasks.UnknownTask;
+import korella.quentin.javaSmartscreen._Interfaces.ITask;
 
 @Component
 @Configuration

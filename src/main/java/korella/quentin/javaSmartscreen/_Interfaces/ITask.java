@@ -1,4 +1,4 @@
-package korella.quentin.javaSmartscreen.VoiceAssistent;
+package korella.quentin.javaSmartscreen._Interfaces;
 
 public interface ITask {
   public void execute();
