@@ -61,11 +61,11 @@
       <version>5prealpha</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/de.sciss/sphinx4-data -->
+    <!-- https://mvnrepository.com/artifact/net.sf.phat/sphinx4-core -->
     <dependency>
-      <groupId>de.sciss</groupId>
-      <artifactId>sphinx4-data</artifactId>
-      <version>1.0.0</version>
+      <groupId>net.sf.phat</groupId>
+      <artifactId>sphinx4-core</artifactId>
+      <version>5prealpha</version>
     </dependency>
 
     <!-- https://mvnrepository.com/artifact/com.ibm.watson/text-to-speech -->
