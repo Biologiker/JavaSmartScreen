@@ -6,23 +6,16 @@ import java.io.InputStream;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-import javax.sound.sampled.LineUnavailableException;
 
 import org.springframework.stereotype.Component;
 
 @Component
 public class PlaySound {
-
-  private Clip clip;
-
-  public PlaySound() throws LineUnavailableException {
-    this.clip = AudioSystem.getClip();
-  }
-
   public void play(InputStream inputStream, File file) {
     new Thread(() -> {
       try {
         AudioInputStream audioInputStream;
+        Clip clip = AudioSystem.getClip();
 
         try {
           audioInputStream = AudioSystem.getAudioInputStream(file);

@@ -43,11 +43,11 @@ public class SpeechToText implements InitializingBean {
   public void afterPropertiesSet() throws Exception {
     edu.cmu.sphinx.api.Configuration config = new edu.cmu.sphinx.api.Configuration();
 
-    config.setAcousticModelPath("src/main/resources/voiceAssistent/acoustics/germanAcoustic");
-    config.setDictionaryPath("src/main/resources/voiceAssistent/dictonarys/german.dic");
-    config.setLanguageModelPath("src/main/resources/voiceAssistent/languageModels/german.lm.bin");
+    config.setAcousticModelPath("resource:/voiceAssistent/acoustics/germanAcoustic");
+    config.setDictionaryPath("resource:/voiceAssistent/dictonarys/german.dic");
+    config.setLanguageModelPath("resource:/voiceAssistent/languageModels/german.lm.bin");
 
-    config.setGrammarPath("src/main/resources/voiceAssistent/grammar");
+    config.setGrammarPath("resource:/voiceAssistent/grammar");
     config.setGrammarName("grammar");
     config.setUseGrammar(true);
 
@@ -77,7 +77,7 @@ public class SpeechToText implements InitializingBean {
   public Boolean checkForWakeword(String voiceCommand) {
     for (String wakeWord : JavaSmartscreenApplication.WakeWords) {
       if (voiceCommand.contains(wakeWord)) {
-        playSound.play(null, new File("src/main/resources/recStart1.wav"));
+        playSound.play(null, new File(getClass().getResource("/").getPath() + "recStart1.wav"));
         return true;
       }
     }
