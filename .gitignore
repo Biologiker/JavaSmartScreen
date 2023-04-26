@@ -93,3 +93,5 @@ yarn-error.log
 
 /application.properties
 /commands.txt
+src/main/resources/User/Data/*
+src/main/resources/User/Settings/*.config
