@@ -5,8 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 import com.google.gson.Gson;
@@ -15,11 +13,8 @@ import com.google.gson.GsonBuilder;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-@Component
-@Configuration
-public class WeeklyForecastDataHandler {
-
-  public void saveWeeklyForecastData() {
+public class DailyForecastDataHandler {
+  public static void saveWeeklyForecastData() {
     Calendar cal = Calendar.getInstance();
     SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -46,7 +41,7 @@ public class WeeklyForecastDataHandler {
 
     Gson gson = new GsonBuilder().create();
 
-    String path = getClass().getResource("/").getPath() + "User/Data/dailyForecastData.json";
+    String path = DailyForecastDataHandler.class.getResource("/").getPath() + "User/Data/dailyForecastData.json";
 
     DailyForecastData myObjects = gson.fromJson(responseBody, DailyForecastData.class);
 
