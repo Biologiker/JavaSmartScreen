@@ -6,11 +6,11 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Schedular {
+public class _Schedular {
   private int hour = 60 * 60 * 1000;
   private int tenMinutes = 10 * 60 * 1000;
 
-  public Schedular() {
-    new Timer().scheduleAtFixedRate(new WeeklyForecastTask(), 0, tenMinutes);
+  public _Schedular() {
+    new Timer().scheduleAtFixedRate(new DailyForecastTask(), 0, tenMinutes);
   }
 }
