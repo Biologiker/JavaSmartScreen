@@ -11,6 +11,6 @@ public class _Schedular {
   private int tenMinutes = 10 * 60 * 1000;
 
   public _Schedular() {
-    new Timer().scheduleAtFixedRate(new DailyForecastTask(), 0, tenMinutes);
+    new Timer().scheduleAtFixedRate(new SaveWeatherDataTask(), 0, tenMinutes);
   }
 }
