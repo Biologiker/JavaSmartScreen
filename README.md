@@ -12,3 +12,7 @@
 - Speech to text
 - Text to speech
 - Not much functionality but i am working on it
+
+<h4>Editor Notes:</h4>
+
+- Frontend startet man mit 'npm run serve' du Vollidiot
